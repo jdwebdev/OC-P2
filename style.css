@@ -7,16 +7,21 @@
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #444;
-    
 }
 
-.theme_color{
+.background_theme_color{
     background-color: #607D8B ;
+}
+.theme_color{
+    color: #607D8B;
+}
+.bold{
+    font-weight: bold;
 }
 
 #main-wrapper{
     width: 100%;
-    border: 1px solid #607D8B;
+    
 }
 
 /* HEADER */
@@ -29,7 +34,6 @@ header {
     text-align: center;
 }
 .header__picture--image{
-    
     width: 150px;
     height: 150px;
     margin: 0 auto;
@@ -46,7 +50,6 @@ header {
     border-bottom: 2px solid #607D8B; 
 }
 
-
 header h1{
     text-transform: uppercase;
     font-weight: lighter;
@@ -55,44 +58,102 @@ header h1{
 header h2{
     padding:10px;
 }
-.header__title--name_em{
-    color:#607D8B;
-    font-weight: bold;
-}
-
-
 
 
 /* MAIN SECTION */
+article{
+    margin: 10px;
+    padding: 10px;
+    
+    box-shadow: 0px 0px 8px #607D8B;
+    border-radius: 5px;
+}
+
 .article_title{
     width: 80%;
-    margin: 0 auto;
-    border-bottom: 1px solid #607D8B;
+    margin: 15px auto;
+    padding: 10px;
+    border-bottom: 2px solid #607D8B;
+    text-transform: uppercase;
+    text-align: center;
+    display:flex;
+    align-items: center;    
 }
-/* 
-i::before{
-    content:"";
 
-} */
+.article_title i{
+    /* height: 20px; */
+    font-size: 20px;
+    margin-right: 5px;
+    
+}
+/* h2 FORMATION EXP PRO etc..*/
+.article_title__title{
+    flex:1;
+}
 
+.article_content{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 10px;
+}
 
+.article_content__date-place{
+    font-weight: bold;
+    font-size:15px;
+    display:flex;
+    margin-bottom: 10px;
+}
 
+.article_content__date-place i{
+    margin: 3px 5px;
+    font-size: 12px;
+}
 
+.article_content__title{
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px
+}
+.article_content__subtitle{
+    margin-bottom: 10px;
+}
+.article_content__text{
+    text-align: justify;
+}
 
-
+.article_content__recommendation{
+    margin-bottom:10px;
+}
 
 @media all and (min-width: 768px)
 {
     #main-wrapper{
         width: 768px;
         margin: 0 auto;
+        border: 1px solid #607D8B;
+    }
+
+    .article_title{
+        text-align: left;
+    }
+
+    .article_title i{
+        float: left;
+        padding: 5px;
+    }
+
+    .article_content{
+        display:flex;
+        flex-direction: row;
+        padding: 10px;
+        margin-bottom: 10px;
     }
 }
 @media all and (min-width: 1024px)
 {
     #main-wrapper{
         width: 900px;
-        margin: 0 auto;
     }
 }
 
