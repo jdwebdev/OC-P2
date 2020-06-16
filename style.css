@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     color: #444;
 }
 
@@ -20,8 +20,7 @@ body{
 }
 
 #main-wrapper{
-    width: 100%;
-    
+    width: 100%;    
 }
 
 /* HEADER */
@@ -50,12 +49,12 @@ header {
     border-bottom: 2px solid #90A4AE; 
 }
 
-header h1{
+h1{
     text-transform: uppercase;
     font-weight: lighter;
     padding:10px;
 }
-header h2{
+h2{
     padding:10px;
 }
 
@@ -64,7 +63,6 @@ header h2{
 article{
     margin: 10px;
     padding: 10px;
-    
     box-shadow: 0px 0px 8px #90A4AE;
     border-radius: 5px;
 }
@@ -81,12 +79,10 @@ article{
 }
 
 .article_title i{
-    /* height: 20px; */
     font-size: 20px;
     margin-right: 5px;
-    
 }
-/* h2 FORMATION EXP PRO etc..*/
+/* h3  */
 .article_title__title{
     flex:1;
 }
@@ -94,7 +90,7 @@ article{
 .article_content{
     display:flex;
     flex-direction: column;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
 }
 
@@ -124,6 +120,7 @@ article{
 
 .article_content__recommendation{
     margin-bottom:10px;
+    text-align:center;
 }
 
 
@@ -146,16 +143,15 @@ aside p{
 .about{
     text-align: justify;
     text-indent: 20px;
-
 }
 
-
-
+.contact p{
+    text-align: center;
+}
 .hobby{
     display: flex;
     justify-content: space-around;
     align-items:center;
-    
 }
 
 .icon{
@@ -174,16 +170,61 @@ aside p{
 
 @media all and (min-width: 768px)
 {
+
+    p{
+        font-size: 12px;
+    }
     #main-wrapper{
         width: 768px;
         margin: 0 auto;
         border: 1px solid #90A4AE; 
     }
 
-    
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header__title{
+        text-align: left;
+        padding: 50px 0;
+    }
+
+    .header__picture{
+        flex:1;
+    }
+    .header__title{
+        flex:2;
+    }
+
+    h1, h2{
+        margin-left:25px;
+    }
+
+    /* #main{
+        display:flex;
+        flex-direction: row-reverse;
+    } */
+    main{
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    #main_section{
+        flex:2;
+    }
+
+    article{
+        margin: 10px;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 0;
+    }
 
     .article_title{
+        padding-left:0px;
         text-align: left;
+        width:92%;
     }
 
     .article_title i{
@@ -197,11 +238,61 @@ aside p{
         padding: 10px;
         margin-bottom: 10px;
     }
+
+
+    .article_content__date-place{
+        flex:1;
+    }
+    .article_content__date-place + div{
+        flex:2;
+    }
+
+    .article_content__text{
+        text-align: justify;
+        padding-right:10px;
+    }
+
+    #recommendation .article_content{
+        justify-content: space-around;
+        padding: 10px 20px;
+    }
+    .article_content__recommendation{
+        text-align:left;
+        width:100%;
+    }
+
+    aside{
+        display:flex;
+        flex-direction:column;
+        flex:1;
+    }
+    .contact{
+
+    }
+    .contact p{
+        text-align:left;
+    }
+    aside section:nth-child(2){
+        flex-grow:1;
+    }
+    .about{
+        height:100%;
+    }
+
+    aside section div.background_theme_color{
+        padding: 30px;
+    }
+
 }
+
+
 @media all and (min-width: 1024px)
 {
     #main-wrapper{
         width: 900px;
+    }
+    .article_content__date-place{
+        padding-left:10px;
     }
 }
 
